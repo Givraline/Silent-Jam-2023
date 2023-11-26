@@ -36,8 +36,6 @@ public class TimedEvent : MonoBehaviour
     private IEnumerator StartEvent()
     {
         Free = false;
-        float timeToWait = Random.Range(minTime, maxTime);
-        yield return new WaitForSeconds(timeToWait);
         float clipLength = PlaySound();
         yield return new WaitForSeconds(clipLength);
         Free = true;
