@@ -35,6 +35,7 @@ public class MelodyDataInspector : Editor
         }
         GUILayout.EndHorizontal();
         GUILayout.Label("Check the box to record Melody (press buttons above like piano keys :)" , new GUIStyle(GUI.skin.label) { fontSize = 17, fontStyle = FontStyle.Bold });
+        GUILayout.Label("(You can change the notes sounds in Assets/Data/NoteData)" , new GUIStyle(GUI.skin.label) { fontSize = 14, fontStyle = FontStyle.Italic });
         GUILayout.BeginHorizontal();
         _record = EditorGUILayout.Toggle(_record, GUILayout.Height(50));
         GUILayout.EndHorizontal();

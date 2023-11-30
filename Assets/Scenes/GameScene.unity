@@ -731,7 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eb603bfdd197be48b3418b1f0e15442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _melodyData: {fileID: 11400000, guid: 7241d314d39610d43b1aeb411cce9c3d, type: 2}
+  _melodyData: {fileID: 11400000, guid: 6542721963f1c234580aaea90ddda8b1, type: 2}
 --- !u!4 &1971712140
 Transform:
   m_ObjectHideFlags: 0

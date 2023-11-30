@@ -40,7 +40,7 @@ public class MelodyCreatorWindow : EditorWindow
             GUILayout.BeginVertical("HelpBox");
 
 
-            GUILayout.Label("Melody n°"+i, new GUIStyle(GUI.skin.label) { fontStyle = FontStyle.Italic, normal = new GUIStyleState() { textColor = new Color(1, 0.8f, 0.4f) } });
+            GUILayout.Label("Melody n°"+(i+1), new GUIStyle(GUI.skin.label) { fontStyle = FontStyle.Italic, normal = new GUIStyleState() { textColor = new Color(1, 0.8f, 0.4f) } });
 
             GUI.backgroundColor = new Color(1f, 0.5f, 0.6f);
             if (GUILayout.Button("X", GUILayout.Width(50)))
