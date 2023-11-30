@@ -29,7 +29,7 @@ public class TimedEvent : MonoBehaviour
     public bool TryStartTimedEvent()
     {
         if (!Free) return false;
-        StopCoroutine(StartEvent());
+        StartCoroutine(StartEvent());
         return true;
     }
 
