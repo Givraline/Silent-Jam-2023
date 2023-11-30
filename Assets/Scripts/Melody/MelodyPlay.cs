@@ -12,10 +12,20 @@ public class MelodyPlay : MonoBehaviour
     public AudioSource AudioS { get => audioS; set => audioS = value; }
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        MeloLength = meloScript.Melody.Count;
+        AudioS = this.GetComponent<AudioSource>();
+    }
     void Start()
     {
-        AudioS = this.GetComponent<AudioSource>();
+        
+    }
+
+    private void Update()
+    {
         MeloLength = meloScript.Melody.Count;
+        Debug.Log(MeloLength);
     }
 
     public void PlaySong(int noteNumber)

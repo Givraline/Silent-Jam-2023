@@ -13,7 +13,7 @@ public class NoteSpawnBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartNoteWait();
+        c = StartCoroutine(NoteWait());
     }
 
     // Update is called once per frame
@@ -22,26 +22,17 @@ public class NoteSpawnBehaviour : MonoBehaviour
         
     }
 
-    void StartNoteWait()
-    {
-        c = StartCoroutine(NoteWait());
-    }
-
-    void RestartNoteWait()
-    {
-        if(c != null) StopCoroutine(c);
-        StartNoteWait();
-    }
-
     IEnumerator NoteWait()
     {
-        if(meloLength < melodyPlay.MeloLength)
+        Debug.Log(melodyPlay.MeloLength);
+        while(meloLength < melodyPlay.MeloLength)
         {
             Instantiate(note, spawnArray[Random.Range(0, spawnArray.Length)].transform.position, Quaternion.identity);
             melodyPlay.PlaySong(meloLength);
             meloLength++;
             yield return new WaitForSeconds(melodyPlay.AudioS.clip.length);
         }
-        RestartNoteWait();
+
+        StopCoroutine(NoteWait());
     }
 }
